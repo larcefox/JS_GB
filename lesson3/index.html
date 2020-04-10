@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Урок 3. Основы языка JavaScript</title>
+</head>
+<body>
+
+<!--Задание 1-->
+    <script>
+        var numRange = [], simplNum = [0 , 1], num;
+
+        for (var i = 2; i < 101; i++){
+            numRange.push(i);
+
+        }
+
+        i = 0;
+        while (numRange.length){
+            num = numRange.shift();
+
+            while(i != numRange.length){
+
+                if (!(numRange[i] % num)){
+
+                    numRange.splice(i,1);
+                    continue
+                }
+                i++;
+
+            }
+            i = 0;
+            simplNum.push(num);
+
+        }
+        console.log(simplNum);
+    </script>
+
+<!--Задание 2,3-->
+    <script>
+        var basketArray = [
+            item1 = {
+                name: 'RaspBerryPi Zero',
+                caption: 'Mini-computer',
+                price: 20,
+                quantity: 2,
+                vendor: 'Raspberry Pi Trading Ltd.'
+            },
+
+            item2 = {
+                name: 'RaspBerryPi 3',
+                caption: 'Mini-computer',
+                price: 30,
+                quantity: 1,
+                vendor: 'Raspberry Pi Trading Ltd.'
+            },
+
+            item3 = {
+                name: 'RaspBerryPi 4',
+                caption: 'Mini-computer',
+                price: 40,
+                quantity: 5,
+                vendor: 'Raspberry Pi Trading Ltd.'
+            }
+        ];
+
+        function countBasketPrice(basket){
+            var sum = 0;
+            for (var i = 0; i < basket.length; i++){
+                sum += basket[i].price * basket[i].quantity;
+            }
+            return sum
+        }
+
+        console.log(countBasketPrice(basketArray));
+
+    </script>
+
+<!--Задание 4-->
+    <script>
+        for (var i = 0; i < 10; console.log(i++)) {}
+    </script>
+
+<!--Задание 5-->
+    <script>
+        var str = 'x', i = 0;
+        for (i ; i < 20; i++){
+            console.log(str.repeat(i));
+        }
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+<script>
+
+    // 1. С помощью цикла while вывести все простые числа в промежутке от 0 до 100.
+    // 2. С этого урока начинаем работать с функционалом интернет-магазина. Предположим, есть сущность корзины. Нужно реализовать функционал подсчета стоимости корзины в зависимости от находящихся в ней товаров.
+    // 3. Товары в корзине хранятся в массиве. Задачи:
+    // a) Организовать такой массив для хранения товаров в корзине;
+    // b) Организовать функцию countBasketPrice, которая будет считать стоимость корзины.
+    // 4.*Вывести с помощью цикла for числа от 0 до 9, не используя тело цикла. Выглядеть это должно так:
+    //     for(…){// здесь пусто}
+    //
+    //     5. *Нарисовать пирамиду с помощью console.log, как показано на рисунке, только у вашей пирамиды должно быть 20 рядов, а не 5:
+    //     x
+    //     xx
+    //     xxx
+    //     xxxx
+    //     xxxxx
+
+</script>
