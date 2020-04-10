@@ -6,53 +6,88 @@
 </head>
 <body>
 
-<!--&lt;!&ndash;Задание 1&ndash;&gt;-->
-<!--    <script>-->
-<!--        var numRange = [], simplNum = [0 , 1], num, i = 0;-->
+<!--Задание 1-->
+    <script>
+        var numRange = [], simplNum = [0 , 1], num;
 
-<!--        for (var i = 2; i < 101; i++){-->
-<!--            numRange.push(i);-->
+        for (var i = 2; i < 101; i++){
+            numRange.push(i);
 
-<!--        }-->
+        }
 
-<!--        i = 0;-->
-<!--        while (numRange.length){-->
-<!--            num = numRange.shift();-->
+        i = 0;
+        while (numRange.length){
+            num = numRange.shift();
 
-<!--            while(i != numRange.length){-->
+            while(i != numRange.length){
 
-<!--                if (!(numRange[i] % num)){-->
+                if (!(numRange[i] % num)){
 
-<!--                    numRange.splice(i,1);-->
-<!--                    continue-->
-<!--                }-->
-<!--                i++;-->
+                    numRange.splice(i,1);
+                    continue
+                }
+                i++;
 
-<!--            }-->
-<!--            i = 0;-->
-<!--            simplNum.push(num);-->
+            }
+            i = 0;
+            simplNum.push(num);
 
-<!--        }-->
-<!--        console.log(simplNum);-->
-<!--    </script>-->
+        }
+        console.log(simplNum);
+    </script>
 
 <!--Задание 2,3-->
-<script>
+    <script>
+        var basketArray = [
+            item1 = {
+                name: 'RaspBerryPi Zero',
+                caption: 'Mini-computer',
+                price: 20,
+                quantity: 2,
+                vendor: 'Raspberry Pi Trading Ltd.'
+            },
 
-</script>
+            item2 = {
+                name: 'RaspBerryPi 3',
+                caption: 'Mini-computer',
+                price: 30,
+                quantity: 1,
+                vendor: 'Raspberry Pi Trading Ltd.'
+            },
+
+            item3 = {
+                name: 'RaspBerryPi 4',
+                caption: 'Mini-computer',
+                price: 40,
+                quantity: 5,
+                vendor: 'Raspberry Pi Trading Ltd.'
+            }
+        ];
+
+        function countBasketPrice(basket){
+            var sum = 0;
+            for (var i = 0; i < basket.length; i++){
+                sum += basket[i].price * basket[i].quantity;
+            }
+            return sum
+        }
+
+        console.log(countBasketPrice(basketArray));
+
+    </script>
+
+<!--Задание 4-->
+    <script>
+        for (var i = 0; i < 10; console.log(i++)) {}
+    </script>
 
 <!--Задание 5-->
-<script>
-    for(var i = 0; i < 10; console.log(i++)){}
-</script>
-
-<!--Задание 5-->
-<script>
-    var str = 'x', i = 0;
-    for (i ; i < 20; i++){
-        console.log(str.repeat(i));
-    }
-</script>
+    <script>
+        var str = 'x', i = 0;
+        for (i ; i < 20; i++){
+            console.log(str.repeat(i));
+        }
+    </script>
 
 </body>
 </html>
